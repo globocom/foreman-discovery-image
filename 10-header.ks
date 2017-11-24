@@ -11,4 +11,4 @@ bootloader --timeout=1 --append="acpi=force"
 rootpw --iscrypted $1$_redhat_$i3.3Eg7ko/Peu/7Q/1.wJ/
 part / --size 1024 --fstype ext4 --ondisk sda
 
-services --disabled=network,sshd --enabled=NetworkManager
+services --disabled=network,sshd,firewalld --enabled=NetworkManager
