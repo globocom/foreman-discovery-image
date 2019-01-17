@@ -79,6 +79,8 @@ end
 # Script was (re)started - delete old data
 File.unlink(PROXY_CACHE) if File.exists?(PROXY_CACHE)
 
+sleep 15
+
 log_msg "Some interesting facts about this system:"
 facts = Hash[Facter.to_hash.select {|k,v| k =~ /address|hardware|manufacturer|productname|memorytotal/}]
 facts.keys.sort.each {|k| log_msg " #{k}: #{facts[k]}"}
